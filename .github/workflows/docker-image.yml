@@ -64,3 +64,9 @@ jobs:
         
     - name: Push to DockerHub
       run: docker push sivasankariverticurl/sivaimg
+
+      # This takes a very long time to produce results. Hence commenting.  
+    - name: ZAP Scan
+      uses: zaproxy/action-full-scan@v0.7.0
+      with:
+        target: 'https://www.zaproxy.org/'
